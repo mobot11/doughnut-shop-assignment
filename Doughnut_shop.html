@@ -6,18 +6,33 @@
 <body>
   <main id="content"></main>
 
- <table>
-    <tr id="hours"><th></th><td>7:00 AM</td><td>8:00 AM</td><td>9:00 AM</td><td>10:00 AM</td><td>11:00 AM</td><td>12:00 PM</td><td>1:00 PM</td><td>2:00 PM</td><td>3:00 PM</td><td>4:00 PM</td><td>5:00 PM</td><td>6:00 PM</td><td>Total</td></tr>
-    <tr id="DownTown"><th>Downtown</th></tr>
-    <tr id="CapitolHill"><th>Capitol Hill</th></tr>
-    <tr id="SouthLakeUnion"><th>South Lake Union</th></tr>
-    <tr id="Wedgewood"><th>Wedgewood</th></tr>
-    <tr id="Ballard"><th>Ballard</th></tr>
-  </table>
+    <table id="donutTable">
+      <th colspan="2"><h3>Daily Totals</h3></th>
+      <tr id="DownTown"><th>Downtown</th></tr>
+      <tr id="CapitolHill"><th>Capitol Hill</th></tr>
+      <tr id="SouthLakeUnion"><th>South Lake Union</th></tr>
+      <tr id="Wedgewood"><th>Wedgewood</th></tr>
+      <tr id="Ballard"><th>Ballard</th></tr>
+    </table>
+  <form id="donutForm">
+    <label for="shopName">Shop Name</label>
+    <input name="shopName" type="text">
+    <label for="minCustomers">Minimum Customers Per Hour</label>
+    <input name="minCustomers" type="number">
+    <label for="maxCustomers">Maximum Customers Per Hour</label>
+    <input name="maxCustomers" type="number">
+    <label for="averageCustomers">Average Donuts Purchased Per
+      customer</label>
+      <input name="averageCustomers" type="number">
+
+
+    <button type="submit">Create new Top Pot Donut Shop!</button>
+  </form>
+
+
 
 <script src="Doughnut_shop.js"></script>
-
-
-
+<script src="add_location.js"></script>
+<script src="events.js"></script>
 </body>
 </html>
