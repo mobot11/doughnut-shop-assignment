@@ -3,7 +3,7 @@
     this.locationName = locationName;
     this.maxCustomers = maxCustomers;
     this.minCustomers = minCustomers;
-    this.average = average;
+    this.average = Math.floor(average);
     this.hoursOpen = 11;
     this.donutsArray = [];
   };
@@ -23,7 +23,7 @@
     for (var i = 0; i < this.hoursOpen; i++){
     var perHour = this.donutsPerHour();
     total += perHour;
-    // this.donutsArray.push(perHour);
+     this.donutsArray.push(total);
   }
   return total;
   // return donutsArray;
