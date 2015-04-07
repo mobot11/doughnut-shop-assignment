@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <main id="content"></main>
+
+    <table id="doughnut_table">
+    </table>
+ <script>
+  var DoughnutShop = function(name, minCustomers, maxCustomers, doughnuts) {
+    this.name = name;
+    this.minCustomers = minCustomers;
+    this.maxCustomers = maxCustomers;
+    this.hours = 11;
+    this.doughnuts= doughnuts || [];
+  };
+var table = document.getElementById('doughnut_table')
+var shopOne = new DoughnutShop('shop one', 0, 100)
+
+  DoughnutShop.prototype.customersPerHour = function() {
+    return Math.floor(Math.random() * (this.maxCustomers - this.minCustomers) +
+     this.minCustomers)
+  };
+
+
+DoughnutShop.prototype.doughnutsPerCustomer = function() {
+  return Math.floor((Math.random() * 5) + 1)
+};
+
+DoughnutShop.prototype.doughnutsPerHour = function() {
+  return this.customersPerHour() * this.doughnutsPerCustomer();
+};
+
+
+
+DoughnutShop.prototype.createArray = function() {
+  for(i=0; i < this.hours; i++) {
+    var test = this.doughnutsPerHour();
+    return this.doughnuts.push(test);
+  }
+};
+
+DoughnutShop.prototype.render = function() {
+  var tableEl = document.createElement('td')
+  for(i=0; i <this.doughnuts.length; i ++) {
+  console.log(this.doughnuts[i])
+  // return table.appendChild(tableEl);
+ }
+};
+
+shopOne.render();
+</script>
+
+</body>
+</html>
+
