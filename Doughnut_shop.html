@@ -6,53 +6,70 @@
 <body>
   <main id="content"></main>
 
-    <table id="doughnut_table">
-    </table>
+ <table>
+    <tr id="hours"><th></th><td>7:00 AM</td><td>8:00 AM</td><td>9:00 AM</td><td>10:00 AM</td><td>11:00 AM</td><td>12:00 PM</td><td>1:00 PM</td><td>2:00 PM</td><td>3:00 PM</td><td>4:00 PM</td><td>5:00 PM</td><td>6:00 PM</td><td>Total</td></tr>
+    <tr id="shopOne"><th>Shop One</th></tr>
+    <tr id="shopTwo"><th>Shop Two</th></tr>
+    <tr id="shopThree"><th>Shop Three</th></tr>
+    <tr id="shopFour"><th>Shop Four</th></tr>
+    <tr id="shopFive"><th>Shop Five</th></tr>
+  </table>
  <script>
-  var DoughnutShop = function(name, minCustomers, maxCustomers, doughnuts) {
+  var DoughnutShop = function(name, minCustomers, maxCustomers) {
     this.name = name;
     this.minCustomers = minCustomers;
     this.maxCustomers = maxCustomers;
     this.hours = 11;
-    this.doughnuts= doughnuts || [];
+    this.doughnuts= [];
   };
-var table = document.getElementById('doughnut_table')
-var shopOne = new DoughnutShop('shop one', 0, 100)
 
-  DoughnutShop.prototype.customersPerHour = function() {
+
+  DoughnutShop.prototype.customersPerHour = function () {
     return Math.floor(Math.random() * (this.maxCustomers - this.minCustomers) +
      this.minCustomers)
   };
-
-
-DoughnutShop.prototype.doughnutsPerCustomer = function() {
+DoughnutShop.prototype.doughnutsPerCustomer = function () {
   return Math.floor((Math.random() * 5) + 1)
 };
-
-DoughnutShop.prototype.doughnutsPerHour = function() {
+DoughnutShop.prototype.doughnutsPerHour = function () {
   return this.customersPerHour() * this.doughnutsPerCustomer();
 };
 
+  DoughnutShop.prototype.doughnutsPerDay = function () {
+    var perDay = 0;
+    for (var i = 0; i <= 11; i++) {
+      var hourlyTotal = this.doughnutsPerHour();
+      this.doughnuts.push(hourlyTotal);
+      perDay += hourlyTotal;
+    }
+    return this.perDay;
+  };
 
+DoughnutShop.prototype.render = function () {
+    var dailyTotal = this.doughnutsPerDay();
+    var tableEl = document.getElementById(this.name);
+    for (var i = 0; i <= this.doughnuts.length; i++) {
+      var el = document.createElement('td');
+      el.textContent = this.doughnuts[i];
+      tableEl.appendChild(el);
+    }
+    el.textContent = dailyTotal;
+    tableEl.appendChild(el);
+  };
 
-DoughnutShop.prototype.createArray = function() {
-  for(i=0; i < this.hours; i++) {
-    var test = this.doughnutsPerHour();
-    return this.doughnuts.push(test);
-  }
-};
-
-DoughnutShop.prototype.render = function() {
-  var tableEl = document.createElement('td')
-  for(i=0; i <this.doughnuts.length; i ++) {
-  console.log(this.doughnuts[i])
-  // return table.appendChild(tableEl);
- }
-};
-
+var shopOne = new DoughnutShop('shopOne', 0, 100);
+var shopTwo = new DoughnutShop('shopTwo', 0, 45);
+var shopThree = new DoughnutShop('shopThree', 0, 85);
+var shopFour = new DoughnutShop('shopFour', 0, 65);
+var shopFive = new DoughnutShop('shopFive', 0, 115);
 shopOne.render();
+shopTwo.render();
+shopThree.render();
+shopFour.render();
+shopFive.render();
+
+
 </script>
 
 </body>
 </html>
-
