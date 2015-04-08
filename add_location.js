@@ -22,19 +22,26 @@ UserLocation.prototype.donutsPerDay = function() {
 
     for (var i = 0; i <= 11; i++) {
       perHour = this.donutsPerHour();
+      this.donutArray.push(perHour);
       total += perHour;
-      console.log('total ' + total);
     }
     return total;
   };
 
-  UserLocation.prototype.render = function () {
-    var el = document.createElement('td')
-    var tableEl = document.getElementById('donutTable')
-    el.textContent = this.name + this.donutsPerDay();
+  UserLocation.prototype.renderTotal = function () {
+    var el = document.createElement('tr');
+    var tableEl = document.getElementById('donutTable');
+    el.textContent = this.name + " " + this.donutsPerDay();
     tableEl.appendChild(el);
     };
-
+// UserLocation.prototype.renderHourly = function () {
+//   for (var i =0; i <= this.donutArray.length; i++) {
+//     var el = document.createElement('tr');
+//     var tableEl = document.getElementById('donutTable');
+//     el.textContent = this.donutArray[i];
+//     tableEl.appendChild(el);
+//   }
+};
 
 window.UserLocation = UserLocation;
 }());

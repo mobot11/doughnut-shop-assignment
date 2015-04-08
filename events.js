@@ -11,7 +11,8 @@
      event.target.minCustomers.value, event.target.maxCustomers.value,
      event.target.averageCustomers.value)
 
-    newLocation.render();
+    newLocation.renderHourly();
+    newLocation.renderTotal();
   };
 
   donutForm.addEventListener('submit', handleFormSubmit);
