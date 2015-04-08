@@ -18,7 +18,7 @@
 
 UserLocation.prototype.donutsPerDay = function() {
     var total = 0;
-    for (var i = 0; i <= 11; i++) {
+    for (var i = 0; i < this.hoursOpen; i++) {
       var perHour = this.donutsPerHour();
       this.donutArray.push(perHour);
       total += perHour;
@@ -27,14 +27,20 @@ UserLocation.prototype.donutsPerDay = function() {
   };
 
   UserLocation.prototype.renderTotal = function () {
-    var amountEl = document.createElement('td');
+    var total = this.donutsPerDay();
     var nameEl = document.createElement('tr');
+    var amountEl = document.createElement('td');
     var tableEl = document.getElementById('donutTable');
     nameEl.innerHTML = "<th>" + this.name; + "</th>";
     tableEl.appendChild(nameEl)
-    amountEl.textContent = this.donutsPerDay();
+    for (var i = 0; i < this.donutArray.length; i++){
+      var hourlyEl = document.createElement('td')
+      hourlyEl.textContent = this.donutArray[i];
+      nameEl.appendChild(hourlyEl);
+    }
+    amountEl.textContent = total;
     nameEl.appendChild(amountEl);
-    };
+  };
 
 window.UserLocation = UserLocation;
 }());

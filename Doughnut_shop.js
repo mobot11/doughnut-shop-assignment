@@ -6,6 +6,7 @@
     this.average = Math.floor(average);
     this.hoursOpen = 11;
     this.donutsArray = [];
+    this.total = 0;
   };
 
 
@@ -20,21 +21,31 @@
 
   DonutShop.prototype.donutsPerDay = function() {
     var total = 0;
+
     for (var i = 0; i < this.hoursOpen; i++){
-    var perHour = this.donutsPerHour();
-    total += perHour;
-     this.donutsArray.push(total);
-  }
-  return total;
+      var perHour = this.donutsPerHour();
+      this.donutsArray.push(perHour);
+      total += perHour;
+    }
+
+    return total;
   // return donutsArray;
   // console.log(donutsArray)
   };
 
   DonutShop.prototype.render = function () {
-    var el = document.createElement('td')
-    var tableEl = document.getElementById(this.locationName)
-    el.textContent = this.donutsPerDay();
-    tableEl.appendChild(el);
+    var total = this.donutsPerDay();
+    var rowEl = document.getElementById(this.locationName)
+
+    for (var i = 0; i < this.donutsArray.length; i++) {
+      var hourlyEl = document.createElement('td')
+      hourlyEl.textContent = this.donutsArray[i];
+      rowEl.appendChild(hourlyEl);
+    }
+
+    var totalEl = document.createElement('td')
+    totalEl.textContent = total;
+    rowEl.appendChild(totalEl);
   };
 
 
