@@ -27,12 +27,7 @@ UserLocation.prototype.donutsPerDay = function() {
   };
 
   UserLocation.prototype.renderTotal = function () {
-<<<<<<< HEAD
-
-    var amountEl = document.createElement('td');
-=======
     var total = this.donutsPerDay();
->>>>>>> events
     var nameEl = document.createElement('tr');
     var amountEl = document.createElement('td');
     var tableEl = document.getElementById('donutTable');
