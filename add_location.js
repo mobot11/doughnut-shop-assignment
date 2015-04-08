@@ -18,10 +18,8 @@
 
 UserLocation.prototype.donutsPerDay = function() {
     var total = 0;
-    var perHour;
-
     for (var i = 0; i <= 11; i++) {
-      perHour = this.donutsPerHour();
+      var perHour = this.donutsPerHour();
       this.donutArray.push(perHour);
       total += perHour;
     }
@@ -29,19 +27,14 @@ UserLocation.prototype.donutsPerDay = function() {
   };
 
   UserLocation.prototype.renderTotal = function () {
-    var el = document.createElement('tr');
+    var amountEl = document.createElement('td');
+    var nameEl = document.createElement('tr');
     var tableEl = document.getElementById('donutTable');
-    el.textContent = this.name + " " + this.donutsPerDay();
-    tableEl.appendChild(el);
+    nameEl.innerHTML = "<th>" + this.name; + "</th>";
+    tableEl.appendChild(nameEl)
+    amountEl.textContent = this.donutsPerDay();
+    nameEl.appendChild(amountEl);
     };
-// UserLocation.prototype.renderHourly = function () {
-//   for (var i =0; i <= this.donutArray.length; i++) {
-//     var el = document.createElement('tr');
-//     var tableEl = document.getElementById('donutTable');
-//     el.textContent = this.donutArray[i];
-//     tableEl.appendChild(el);
-//   }
-};
 
 window.UserLocation = UserLocation;
 }());
