@@ -7,42 +7,61 @@
   <title>Top Pot ||  Donut Table</title>
 </head>
 <body>
+
   <main id="content"></main>
-  <header>
+    <header>
     <div id="title">
       <h5>Top Pot Donuts</h1>
-    </td>
-  </header>
+    </header>
+    <div id="fixed">
+     <a href="https://www.google.com/maps/search/top+pot+donuts/">Find the closest Top Pot Location!</a>
+    </div>
+    <p id="table">
+      This table takes parameters from local top pot donut shops and estimates the average hourly and daily donuts made. Try it out for yourself!
+    </p>
+      <table id="donutTable">
+        <th colspan="13" id="table_Header">Donuts Per Day</th>
+          <tr>
+            <td id="noBackground">Hours Open:</td><td>7:00AM </td><td>8:00AM </td><td>9:00AM </td><td>10:00AM </td><td>11:00AM </td><td>12:00AM </td><td>1:00PM </td><td>2:00PM </td><td>3:00PM </td><td>4:00PM </td><td>5:00PM </td><td>Total</td>
+          </tr>
+          <tr id="DownTown" class="shopName" class="even"><th>Downtown</th></tr>
+          <tr id="CapitolHill" class="shopName"><th>Capitol Hill</th></tr>
+          <tr id="SouthLakeUnion" class="shopName" class="even"><th>South Lake Union</th></tr>
+          <tr id="Wedgewood" class="shopName"><th>Wedgewood</th></tr>
+          <tr id="Ballard" class="shopName" class="even"><th>Ballard</th></tr>
+      </table>
+</p>
 
-    </table>
+<p id="form">
   <form id="donutForm">
-    <h2 id="formHead">create your own Top Pot Donuts!</h2>
-    <label for="shopName" class="formName">Shop Name</label>
-    <input name="shopName" type="text" class="formInput">
-    <label for="minCustomers" class="formName">Minimum Customers Per Hour</label>
-    <input name="minCustomers" type="number" class="formInput">
-    <label for="maxCustomers" class="formName">Maximum Customers Per Hour</label>
-    <input name="maxCustomers" type="number" class="formInput">
-    <label for="averageCustomers" class="formName">Average Donuts Purchased Per
-      customer</label>
-      <input name="averageCustomers" type="number" class="formInput">
+    <h1 id="formHead">create your own Top Pot Donuts!</h1>
+    <div >
+      <label for="shopName" class="formName">Shop Name:</label>
+      <input name="shopName" type="text" class="formInput" id="shopdiv">
+    </div>
+    <div >
+      <label for="minCustomers" class="formName">Minimum Customers Per Hour:</label>
+      <input name="minCustomers" type="number" class="formInput" id="mindiv">
+    </div>
+    <div >
+      <label for="maxCustomers" class="formName">Maximum Customers Per Hour:</label>
+      <input name="maxCustomers" type="number" class="formInput" id="maxdiv">
+    </div>
+    <div >
+      <label for="averageCustomers" class="formName" id="average">Average Donuts Per
+      customer:</label>
+      <input name="averageCustomers" type="number" class="formInput" id ="avediv">
+    </div>
 
 
     <button type="submit" id="submitButton">Create new Top Pot Donut Shop!</button>
   </form>
-<table id="donutTable">
-      <th colspan="13" id="table_Header">Donuts Per Day</th>
-      <tr>
-          <td id="noBackground">Hours Open:</td><td>7:00AM </td><td>8:00AM </td><td>9:00AM </td><td>10:00AM </td><td>11:00AM </td><td>12:00AM </td><td>1:00PM </td><td>2:00PM </td><td>3:00PM </td><td>4:00PM </td><td>5:00PM </td><td>Total</td>
-      </tr>
-      <tr id="DownTown" class="shopName" class="even"><th>Downtown</th></tr>
-      <tr id="CapitolHill" class="shopName"><th>Capitol Hill</th></tr>
-      <tr id="SouthLakeUnion" class="shopName" class="even"><th>South Lake Union</th></tr>
-      <tr id="Wedgewood" class="shopName"><th>Wedgewood</th></tr>
-      <tr id="Ballard" class="shopName" class="even"><th>Ballard</th></tr>
-
-
-
+</p>
+<marquee>
+    <div id="marquee">
+    <img id="donutpic" src="http://rs1img.memecdn.com/not-only-one-donut_o_1297725.jpg">
+    </div>
+  </marquee>
 <script src="Doughnut_shop.js"></script>
 <script src="add_location.js"></script>
 <script src="events.js"></script>

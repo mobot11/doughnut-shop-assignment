@@ -21,7 +21,6 @@
 
   DonutShop.prototype.donutsPerDay = function() {
     var total = 0;
-
     for (var i = 0; i < this.hoursOpen; i++){
       var perHour = this.donutsPerHour();
       this.donutsArray.push(perHour);
