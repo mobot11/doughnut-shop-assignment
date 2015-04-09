@@ -1,0 +1,81 @@
+body {
+  font-family: "Tahoma", "Geneva", sans-serif;
+  background-color: #C9FFD5;
+
+}
+header {
+  background-color: #3F5765;
+  text-align: left;
+}
+
+h5 {
+  color: #49DBD1;
+  text-decoration-color: black;
+  text-decoration: underline;
+
+
+}
+
+
+td {
+  border: solid 1px black;
+  background-color: #004056;
+  }
+
+
+
+table {
+  background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTzntvIhc1sv2QiE-t1Oz1n4L_HKDmLrXD1mb5Jo8AbVEHeCLlU");
+  border: .07em solid black;
+  border-radius: 1%;
+
+  background-color: #2C858D;
+  color: #49DBD1;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.shopName {
+  font-family: "Cabin", sans-serif;
+  background-color: #004056;
+}
+.formInput{
+  background-color: #EFEFEF;
+
+}
+.formName {
+  color: #F2884B;
+}
+
+
+#table_Header{
+  font-size: 2em;
+}
+
+#noBackground {
+  border: none;
+  text-decoration: underline;
+  background-image: background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTzntvIhc1sv2QiE-t1Oz1n4L_HKDmLrXD1mb5Jo8AbVEHeCLlU");;
+}
+
+#donutForm {
+  font-size: .5em;
+}
+
+#submitButton {
+  color: black;
+}
+
+#formHead {
+  color: #F2884B;
+}
+
+
+
+
+
+
+
+
+
+
+
