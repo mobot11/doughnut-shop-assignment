@@ -40,6 +40,10 @@ table {
 }
 .formInput{
   background-color: #EFEFEF;
+
+}
+.formName {
+  color: #F2884B;
 }
 
 
@@ -55,11 +59,14 @@ table {
 
 #donutForm {
   font-size: .5em;
-  color: #F2884B;
 }
 
 #submitButton {
   color: black;
+}
+
+#formHead {
+  color: #F2884B;
 }
 
 
