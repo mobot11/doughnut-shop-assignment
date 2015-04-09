@@ -17,6 +17,8 @@ h5 {
 }
 tr {
   border-style: inset;
+  background-color: #004056;
+
 }
 
 td {
@@ -30,7 +32,7 @@ td {
 table {
   background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTzntvIhc1sv2QiE-t1Oz1n4L_HKDmLrXD1mb5Jo8AbVEHeCLlU");
   border: .06em solid black;
-  border-radius: 1%;
+
 
   background-color: #2C858D;
   color: #49DBD1;
@@ -57,7 +59,8 @@ table {
 
 #table_Header{
   font-size: 2em;
-  color: #F2884B;;
+  color: #F2884B;
+  background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTzntvIhc1sv2QiE-t1Oz1n4L_HKDmLrXD1mb5Jo8AbVEHeCLlU");
 }
 
 #noBackground {
