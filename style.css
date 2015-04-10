@@ -43,11 +43,13 @@ table {
   margin-top: 5%;
   position: absolute;
   z-index: 0;
+
 }
 
 form {
  background-color: #004056 ;
  box-shadow: 5px 5px 5px #777777;
+ /*overflow: hidden;*/
 
 }
 
@@ -96,10 +98,11 @@ form {
   width: 30%;
   margin-left: 15%;
   margin-right: 18%;
-  margin-top: 27%;
+  margin-top: 35%;
   height:30%;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 
 
 }
@@ -150,6 +153,7 @@ form {
   margin-left: 2em;
   border: 1px solid black;
   background-color: #F2884B;
+  border-radius: 5%;
 
 }
 
@@ -159,8 +163,8 @@ form {
   margin-top: 0px;
   max-width:200px;
   max-height:200px;
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  z-index: 4;
 }
 
 #marquee {
