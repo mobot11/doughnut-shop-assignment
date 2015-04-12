@@ -11,14 +11,12 @@
   <main id="content"></main>
     <header>
     <div id="title">
-      <h5>Top Pot Donuts</h1>
+      <h5>Dop Tot Donuts</h5>
     </header>
-    <div id="fixed">
+   <!--  <div id="fixed">
      <a href="https://www.google.com/maps/search/top+pot+donuts/">Find the closest Top Pot Location!</a>
-    </div>
-    <p id="table">
-      This table takes parameters from local top pot donut shops and estimates the average hourly and daily donuts made. Try it out for yourself!
-    </p>
+    </div> -->
+<p id="tableP"><h2 id="description">This table computes the average daily and hourly donuts sold at your local donut shop, try it out for yourself below!</h2>
       <table id="donutTable">
         <th colspan="13" id="table_Header">Donuts Per Day</th>
           <tr>
@@ -31,7 +29,7 @@
           <tr id="Ballard" class="shopName" class="even"><th>Ballard</th></tr>
       </table>
 </p>
-
+<div class="slider"><a href="https://www.google.com/maps/search/top+pot+donuts/">Find the closest top pot location</a></div>
 <p id="form">
   <form id="donutForm">
     <h1 id="formHead">create your own Top Pot Donuts!</h1>
@@ -49,7 +47,7 @@
     </div>
     <div >
       <label for="averageCustomers" class="formName" id="average">Average Donuts Per
-      customer:</label>
+      customer: </label>
       <input name="averageCustomers" type="number" class="formInput" id ="avediv">
     </div>
 
@@ -57,11 +55,8 @@
     <button type="submit" id="submitButton">Create new Top Pot Donut Shop!</button>
   </form>
 </p>
-<marquee>
-    <div id="marquee">
-    <img id="donutpic" src="http://rs1img.memecdn.com/not-only-one-donut_o_1297725.jpg">
-    </div>
-  </marquee>
+<div class="box"></div>
+
 <script src="Doughnut_shop.js"></script>
 <script src="add_location.js"></script>
 <script src="events.js"></script>

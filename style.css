@@ -5,16 +5,19 @@ body {
 }
 header {
   background-color: #3F5765;
-  text-align: left;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 0;
+  padding: 0 0 0 0;
+  border: 0 0 0 0;
+
 }
 
 h5 {
   color: #49DBD1;
   text-decoration-color: black;
-  /*text-decoration: underline;*/
-
-
 }
+
 tr {
   border-style: inset;
   background-color: #004056;
@@ -30,7 +33,7 @@ td {
 
 
 table {
-  margin-top: 20px;
+  /*margin-top: 15px;*/
   font-size: .8em;
   width: 70%;
   background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTzntvIhc1sv2QiE-t1Oz1n4L_HKDmLrXD1mb5Jo8AbVEHeCLlU");
@@ -39,17 +42,39 @@ table {
   color: #49DBD1;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   box-shadow: 5px 5px 5px #777777;
-  margin-left: 10%;
-  margin-top: 5%;
+  margin-left: 12%;
+  margin-top: 0%;
   position: absolute;
-  z-index: 0;
+  z-index: 5;
+
+
 }
 
 form {
  background-color: #004056 ;
  box-shadow: 5px 5px 5px #777777;
+   float: right;
+  font-size: .3em;
+  border: 1px solid gray;
+  border-radius: 1em;
+  width: 30%;
+  margin-left: 15%;
+  margin-right: 18%;
+  margin-top: 20%;
+  height:30%;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  transition-property: rotateY(0deg);
+  transition-duration: 1s;
+  transition-timing-function: linear;
+ /*overflow: hidden;*/
 
 }
+form:hover {
+  transform: rotateY(360deg);
+}
+
 
 .shopName {
   font-family: "Cabin", sans-serif;
@@ -88,21 +113,7 @@ form {
   /*background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTzntvIhc1sv2QiE-t1Oz1n4L_HKDmLrXD1mb5Jo8AbVEHeCLlU");;*/
 }
 
-#donutForm {
-  float: right;
-  font-size: .3em;
-  border: 1px solid gray;
-  border-radius: 1em;
-  width: 30%;
-  margin-left: 15%;
-  margin-right: 18%;
-  margin-top: 27%;
-  height:30%;
-  position: relative;
-  z-index: 2;
 
-
-}
 
 /*#donutForm input{
   display: inline-block;
@@ -140,7 +151,7 @@ form {
   margin-left: 2em;
 }
 
-#fixed {
+/*#fixed {
   font-family: "Cabin", sans-serif;
   font-size: .8em;
   position: fixed;
@@ -150,8 +161,9 @@ form {
   margin-left: 2em;
   border: 1px solid black;
   background-color: #F2884B;
+  border-radius: 5%;
 
-}
+}*/
 
 #donutpic {
   height:auto;
@@ -159,8 +171,8 @@ form {
   margin-top: 0px;
   max-width:200px;
   max-height:200px;
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  z-index: 4;
 }
 
 #marquee {
@@ -177,6 +189,49 @@ form {
   margin-left: 15%;
   font-weight: bold;
 }
+
+
+/*.donut {
+
+}*/
+
+#description {
+  font-size: .5em;
+  text-align: center;
+}
+
+#tableP {
+  margin-top: -5%;
+}
+
+.slider {
+  border: 15px solid #f00;
+    border-radius: 100px;
+    height:30px;
+    width:30px;
+    font-size: .4em;
+    color:green;
+    z-index: -100;
+    background-color: #FFFAA3;
+    text-align: center;
+    text-decoration: none;
+    bottom: 0;
+    left: 0;
+  overflow-y: hidden;
+  max-height: 500px; /* approximate max height */
+
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.slider.closed {
+  max-height: 0;
+}
+
+
+
+
+
 
 
 
