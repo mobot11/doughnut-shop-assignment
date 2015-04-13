@@ -204,11 +204,11 @@ form:hover {
   margin-top: -5%;
 }
 
-.slider {
-  border: 15px solid #f00;
+.donut {
+  border: 10px solid #f00;
     border-radius: 100px;
-    height:30px;
-    width:30px;
+    height:40px;
+    width:40px;
     font-size: .4em;
     color:green;
     z-index: -100;
@@ -218,15 +218,11 @@ form:hover {
     bottom: 0;
     left: 0;
   overflow-y: hidden;
-  max-height: 500px; /* approximate max height */
+}
+a {
+  text-decoration: none;
+}
 
-  transition-property: all;
-  transition-duration: .5s;
-  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-}
-.slider.closed {
-  max-height: 0;
-}
 
 
 
